@@ -43,11 +43,7 @@ function Footer() {
 
         <div>
           <h4>Social Links</h4>
-          <div className="social-icons">
-            <span>O</span>
-            <span>F</span>
-            <span>X</span>
-          </div>
+          
         </div>
 
       </div>
