@@ -1,16 +1,39 @@
-# React + Vite
+#  Digital Tools Marketplace
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+##  Project Description
+This is a modern React-based web application where users can explore premium digital tools, add them to a cart, and simulate a checkout experience. The project focuses on clean UI design, user-friendly interaction, and component-based architecture.
 
-Currently, two official plugins are available:
+##  Technologies Used
+-  React.js
+- JavaScript (ES6)
+-  CSS3
+-  React Toastify (for notifications)
+-  JSON (for product data)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+##  Features
 
-## React Compiler
+## 1. Add to Cart System
+Users can add products to the cart and remove them easily with real-time updates.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 2. Toggle View (Products / Cart)
+Users can switch between product listing and cart view instantly.
 
-## Expanding the ESLint configuration
+## 3. Image Upload Preview
+Users can upload up to 6 images and see instant previews.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+##  UI Sections
+- Navbar
+- Banner
+- Stats
+- Products
+- Cart
+- Steps (Get Started)
+- Pricing
+- CTA Section
+- Footer
+
+##  How to Run Locally
+
+```bash
+npm install
+npm run dev
