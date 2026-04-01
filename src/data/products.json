@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "name": "Starter",
+    "description": "Basic resume",
+    "price": 10,
+    "features": ["10 templates"],
+    "icon": "📄"
+  },
+  {
+    "id": 2,
+    "name": "Pro",
+    "description": "Advanced",
+    "price": 25,
+    "features": ["50 templates"],
+    "icon": "🚀"
+  }
+]
