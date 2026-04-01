@@ -1,20 +1,11 @@
-export default function Stats() {
+const Stats = () => {
   return (
-    <section className="stats">
-      <div>
-        <h2>50K+</h2>
-        <p>Active Users</p>
-      </div>
-
-      <div>
-        <h2>200+</h2>
-        <p>Premium Tools</p>
-      </div>
-
-      <div>
-        <h2>4.9</h2>
-        <p>Rating</p>
-      </div>
-    </section>
+    <div className="stats">
+      <div>50K+</div>
+      <div>200+</div>
+      <div>4.9</div>
+    </div>
   );
-}
+};
+
+export default Stats;

@@ -1,25 +1,18 @@
-export default function Banner() {
+import bannerImg from "../assets/bannerImg.png"; 
+
+const Banner = () => {
   return (
-    <section className="banner">
-      <div className="banner-left">
-        <span className="badge">🔥 New: AI-Powered Tools Available</span>
-
+    <div className="banner">
+      <div>
         <h1>Supercharge Your Digital Workflow</h1>
+        <p>Access premium AI tools in one place.</p>
 
-        <p>
-          Access premium AI tools, design assets, templates, and productivity
-          software—all in one place. Start creating faster today.
-        </p>
-
-        <div className="banner-buttons">
-          <button className="primary-btn">Explore Products</button>
-          <button className="outline-btn">▶ Watch Demo</button>
-        </div>
+        <button className="btn">Explore Products</button>
       </div>
 
-      <div className="banner-right">
-        <img src="https://i.ibb.co/0y8FtyF/ai-hand.jpg" alt="banner"/>
-      </div>
-    </section>
+      <img src={bannerImg} alt="banner"/> 
+    </div>
   );
-}
+};
+
+export default Banner;

@@ -7,8 +7,12 @@ import Cart from "./components/Cart";
 import Steps from "./components/Steps";
 import Pricing from "./components/Pricing";
 import Footer from "./components/Footer";
+import CTA from "./components/CTA"; // ✅ CTA import added
+
 import data from "./data/products.json";
-import "./App.css";
+
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -16,40 +20,47 @@ function App() {
 
   const addToCart = (product) => {
     setCart([...cart, product]);
-    alert("Added to cart");
+    toast.success("Added to cart");
   };
 
-  const remove = (id) => {
+  const removeItem = (id) => {
     setCart(cart.filter((item) => item.id !== id));
+    toast.error("Removed from cart");
   };
 
   const checkout = () => {
     setCart([]);
-    alert("Checkout done!");
+    toast.info("Checkout successful");
   };
 
   return (
     <>
-      <div className="product-header">
-  <h2>Premium Digital Tools</h2>
-  <p>Choose from our curated collection of premium digital products</p>
+      <Navbar cartCount={cart.length} />
+      <Banner />
+      <Stats />
 
-  <div className="toggle">
-    <button onClick={() => setView("products")}>Products</button>
-    <button onClick={() => setView("cart")}>
-      Cart ({cart.length})
-    </button>
-  </div>
-</div>
+      <div className="toggle">
+        <button onClick={() => setView("products")}>Products</button>
+        <button onClick={() => setView("cart")}>
+          Cart ({cart.length})
+        </button>
+      </div>
+
       {view === "products" ? (
-        <Products products={data} addToCart={addToCart} />
+        <Products data={data} addToCart={addToCart} />
       ) : (
-        <Cart cart={cart} remove={remove} checkout={checkout} />
+        <Cart cart={cart} removeItem={removeItem} checkout={checkout} />
       )}
 
       <Steps />
       <Pricing />
+
+      {/* 🔶 CTA Section (Footer এর আগে বসানো হয়েছে) */}
+      <CTA />
+
       <Footer />
+
+      <ToastContainer />
     </>
   );
 }
